@@ -18,7 +18,7 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.olg
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
-import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.OneLoginGateway
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.OneLogin
 
 object OlgTemplates {
 
@@ -26,8 +26,9 @@ object OlgTemplates {
     MessageTemplate.create(
       templateId = "one_login_setup_complete",
       fromAddress = FromAddress.noReply("Do not reply"),
-      service = OneLoginGateway,
-      subject = "You have changed the way you sign in to HMRC",
+      service = OneLogin,
+      subject =
+        "You have changed the way you sign in to HMRC | Rydych wedi newid y ffordd rydych yn mewngofnodi i CThEF",
       plainTemplate = txt.OneLoginSetupComplete.f,
       htmlTemplate = html.OneLoginSetupComplete.f
     )
